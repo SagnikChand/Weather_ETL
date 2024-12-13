@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 @task
 def fetch_data():
     # Update with your database credentials
-    DATABASE_URI = "postgresql+psycopg2://postgres:261819@localhost:5432/weather_db"
+    DATABASE_URI = "postgresql+psycopg2://user_name:password@localhost:5432/weather_db"
     query = "SELECT * FROM weather_data"
     
     engine = create_engine(DATABASE_URI)
@@ -73,7 +73,7 @@ def transform_data(df):
 
 @task
 def update_postgres(df):
-    DATABASE_URI = "postgresql+psycopg2://postgres:261819@localhost:5432/weather_db"
+    DATABASE_URI = "postgresql+psycopg2://user_name:password@localhost:5432/weather_db"
     engine = create_engine(DATABASE_URI)
     df.to_sql('transformed_weather_data', engine, if_exists='replace', index=False)
 
