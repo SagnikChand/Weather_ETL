@@ -8,14 +8,14 @@ import os
 # Database Connection Details
 db_config = {
     "dbname": "weather_db",
-    "user": "postgres",
-    "password": "261819",
+    "user": "user_name",
+    "password": "password",
     "host": "localhost",
     "port": "5432"
 }
 
 # API Key
-API_KEY = '3154ef71a5f2bf8b3faa9121f09a1df0'
+API_KEY = 'your_api_key'
 
 # List of Top 20 Economically Significant Cities
 cities = [
